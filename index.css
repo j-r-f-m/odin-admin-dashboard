@@ -55,7 +55,7 @@ table {
 /* layout */
 .grid-container {
     display: grid;
-    grid-template-columns: minmax(150px, 20%) 1fr;
+    grid-template-columns: minmax(250px, 20%) 1fr;
     height: 100vh;
 }
 
@@ -99,36 +99,52 @@ header {
 }
 
 
-/* styling */
+/* styling sidebar*/
 .sidebar {
     background-color: #BACBA9;
 }
 
-.h1-sidebar {
-    margin: 1rem 1rem 2rem 0.35rem;
-    font-size: 2rem;    
-}
-
-.dashboard-icon {
-    height: 5rem;
-}
-
 .home, .profile, .messages, .history, .tasks, .settings, .support, .privacy {
     text-decoration: none;
-    margin: 1rem 1rem 0.25rem 1.5rem;
 }
 
-.communities {
-    margin: 1rem 1rem 3rem 1.5rem;
-}
+
+
+
+
+
 
 .heading-sidebar{
     grid-row: 1 / 2;
     display: flex;
+    align-items: center;
+}
+
+.h1-sidebar {
+    font-size: 2rem;    
+}
+
+.dashboard-icon {
+    /* scale icon */
+    height: 2.5rem;
 }
 
 
+.sidebar-home{
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+}
 
 .home{
-    grid-row: 2 / 3;
+    font-size: 1.25rem;
+}
+
+.icon-home {
+    height: 1.25rem;
+}
+
+.communities {
+    margin: 1rem 1rem 3rem 1.5rem;
+    text-align: center;
 }
