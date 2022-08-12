@@ -46,11 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* reset end */
+/*------------------------ reset end -------------------------- */
 
 
-/* variables */
+/* ----------------------- variables ---------------------------- */
+:root{
+    --sidebar-margin-left: 1rem;
+}
 
+/* fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* layout */
 .grid-container {
@@ -64,12 +71,7 @@ table {
     /* height: 100vh; */
 }
 
-.sidebar-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* using rem to size the grid rows without filling the whole column */
-    grid-template-rows: 3.5rem 1.5rem 1.5rem 1.5rem 1.5rem 1.5rem 3.5rem 1.5rem 1.5rem 1.5rem;
-}
+
 
 
 header {
@@ -99,36 +101,31 @@ header {
 }
 
 
-/* styling sidebar*/
+/* -------------------------- sidebar---------------------------------*/
 .sidebar {
     background-color: #BACBA9;
 }
 
-.home, .profile, .messages, .history, .tasks, .settings, .support, .privacy {
+.link-home, .link-profile, .link-message, .link-history, .link-tasks, 
+.link-communities, .link-settings, .link-support, .link-privacy {
     text-decoration: none;
 }
 
 
+/* grid layout */
 
+.sidebar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* using rem to size the grid rows without filling the whole column */
+    grid-template-rows: 4.5rem 2rem 2rem 2rem 2rem 2rem 3.0rem 2rem 2rem 2rem;
+}
 
-
-
-
-.heading-sidebar{
+.sidebar-heading{
     grid-row: 1 / 2;
     display: flex;
-    align-items: center;
+    align-items: start;
 }
-
-.h1-sidebar {
-    font-size: 2rem;    
-}
-
-.dashboard-icon {
-    /* scale icon */
-    height: 2.5rem;
-}
-
 
 .sidebar-home{
     grid-row: 2 / 3;
@@ -136,15 +133,100 @@ header {
     align-items: center;
 }
 
-.home{
+.sidebar-profile{
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-message{
+    grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-history{
+    grid-row: 5 / 6;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-tasks{
+    grid-row: 6 / 7;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-communities{
+    grid-row: 7 / 8;
+    display: flex;
+    align-items: start;
+}
+
+.sidebar-settings{
+    grid-row: 8 / 9;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.sidebar-support{
+    grid-row: 9 / 10;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-privacy{
+    grid-row: 10 / 11;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* font size  */
+.h1-sidebar {
+    margin-top: 0.25rem;
+    font-size: 2rem;
+
+}
+
+.link-home, .link-profile, .link-message, .link-history, .link-tasks, 
+.link-communities, .link-settings, .link-support, .link-privacy{
     font-size: 1.25rem;
 }
 
-.icon-home {
+/* sizing icons*/
+.dashboard-icon {
+    height: 2.5rem;
+}
+
+.icon-home, .icon-profile, .icon-message, .icon-history, .icon-tasks, 
+.icon-communities, .icon-settings, .icon-support, .icon-privacy {
     height: 1.25rem;
 }
 
-.communities {
-    margin: 1rem 1rem 3rem 1.5rem;
-    text-align: center;
+
+/* positon sidebar elements */
+.sidebar > div {
+    margin-left: 1.5em;
 }
+
+.sidebar-heading, .sidebar-communities {
+    margin-top: 0.2rem;
+}
+
+.sidebar > div> a {
+    margin-left: 0.75rem;
+}
+
+a, a:visited, a:hover, a:focus {
+    color: BLACK;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
