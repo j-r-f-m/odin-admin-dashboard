@@ -66,7 +66,8 @@ body {
     height: 100vh;
 }
 
-.sidebar, .main-content, header, .cards-contianer, .card  {
+/* WIP */
+.sidebar, .main-content, header, .cards-contianer  {
     border: 1px solid red;
     /* height: 100vh; */
 }
@@ -291,3 +292,147 @@ a, a:visited, a:hover, a:focus {
 
 
 /* ------------------------------------------------------------------------ */
+
+/* ------------------------ cards container ------------------------------ */
+.cards-container-main {
+    background-color: lightgray;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    /* align-items: center; */
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.right-card-container {
+    grid-row: 2 / 4;
+    grid-column: 3 / 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.h1-left-card-container {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+ 
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.h1-right-card-container {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+ 
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* fonts size */
+.card > p, .card-announcements > p{
+    font-size: x-small;
+}
+
+
+
+/* positioning card content */
+.card > p, .card > h1, .cards-icon > img {
+
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.card-announcements > p, .card-announcements > h1, .cards-icon > img {
+
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.card {
+
+
+    background: linear-gradient(
+        to right,
+        black 0%,
+        black 2.5%,
+        white 2.5%,
+        white 100%
+    );
+    min-height: 6rem;
+    margin: 1rem;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.card-right {
+    background: linear-gradient(
+        to right,
+        black 0%,
+        black 2.5%,
+        white 2.5%,
+        white 100%
+    );
+    min-height: 6rem;
+    margin: 1rem;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-maintenance {
+    font-size: x-small;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    border-bottom: grey;
+    border-style: solid;
+
+}
+
+.cards-icon {
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+
+.cards-icon > img {
+    height: 1.25rem;
+}
+
+.card1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.card2 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.card3 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+.card4 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.card5 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+.card6 {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
