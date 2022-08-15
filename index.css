@@ -67,10 +67,10 @@ body {
 }
 
 /* WIP */
-.sidebar, .main-content, header, .cards-contianer  {
+/* .sidebar, .main-content, header, .cards-contianer  {
     border: 1px solid red;
-    /* height: 100vh; */
-}
+
+} */
 
 /* -------------------------- layout main content ---------------------- */
 
@@ -91,7 +91,11 @@ header {
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr
+    grid-template-rows: 0.1fr 1fr;
+    box-shadow: rgba(10, 10, 10, 0.2) 0px 4px 24px;
+
+    position: relative;
+    
 }
 
 
@@ -138,7 +142,7 @@ header {
 .search-input{
     border: 2.0px solid black;
     border-radius: 25px;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 
@@ -160,6 +164,12 @@ header {
     border-color: #D7AF70;
     background-color: #D7AF70;
 }
+
+/* fonts */
+.container-paragraphs > p, .user-login > p {
+    font-weight: bold;
+}
+
 /* ----------------------------------------------------------------------- */
 
 /* -------------------------- sidebar---------------------------------*/
@@ -179,7 +189,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     /* using rem to size the grid rows without filling the whole column */
-    grid-template-rows: 5rem 2rem 2rem 2rem 2rem 2rem 3.0rem 2rem 2rem 2rem;
+    grid-template-rows: 5rem 3rem 3rem 3rem 3rem 3rem 4.0rem 3rem 3rem 3rem;
 }
 
 .sidebar-heading{
@@ -253,12 +263,14 @@ header {
 .h1-sidebar {
     margin-top: 0.25rem;
     font-size: 2rem;
+    font-weight: bold;
 
 }
 
 .link-home, .link-profile, .link-message, .link-history, .link-tasks, 
 .link-communities, .link-settings, .link-support, .link-privacy{
     font-size: 1.25rem;
+    font-weight: bold;
 }
 
 /* sizing icons*/
@@ -278,7 +290,7 @@ header {
 }
 
 .sidebar-heading, .sidebar-communities {
-    margin-top: 0.2rem;
+    margin-top: 0.75rem;
 }
 
 .sidebar > div> a {
@@ -295,7 +307,7 @@ a, a:visited, a:hover, a:focus {
 
 /* ------------------------ cards container ------------------------------ */
 .cards-container-main {
-    background-color: lightgray;
+    background-color: #E0E0E0;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -307,7 +319,7 @@ a, a:visited, a:hover, a:focus {
 }
 
 .right-card-container {
-    grid-row: 2 / 4;
+    grid-row: 2 / 5;
     grid-column: 3 / 4;
 
     display: flex;
@@ -320,7 +332,7 @@ a, a:visited, a:hover, a:focus {
     grid-column: 1 / 2;
  
     margin-left: 1rem;
-    margin-top: 0.5rem;
+
 }
 
 .h1-right-card-container {
@@ -328,14 +340,34 @@ a, a:visited, a:hover, a:focus {
     grid-column: 3 / 4;
  
     margin-left: 1rem;
-    margin-top: 0.5rem;
+
 }
 
 /* fonts size */
-.card > p, .card-announcements > p{
-    font-size: x-small;
+.card-top > h1, .card-announcements > h1 {
+    font-size: large;
+    font-weight: bold;
 }
 
+.card-top > p, .card-announcements > p{
+    font-size: medium;
+
+
+}
+
+.h1-left-card-container, .h1-right-card-container {
+    font-size: large;
+    font-weight: bold;
+    align-self: center;
+
+    padding-top: 2rem;
+}
+
+.h1-right-card-container-mid {
+    font-size: large;
+    font-weight: bold;
+
+}
 
 
 /* positioning card content */
@@ -344,14 +376,19 @@ a, a:visited, a:hover, a:focus {
     margin: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
-.card-announcements > p, .card-announcements > h1, .cards-icon > img {
+.card-top > p, .card-top > h1, .cards-icon > img {
 
     margin: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
+
+.card-announcements > p, .card-announcements > h1, .cards-icon > img,
+.h1-right-card-container-mid {
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+
 .card {
-
-
     background: linear-gradient(
         to right,
         black 0%,
@@ -360,12 +397,14 @@ a, a:visited, a:hover, a:focus {
         white 100%
     );
     min-height: 6rem;
+    /* max-height: 10rem; */
     margin: 1rem;
     border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: rgba(10, 10, 10, 0.2) 0px 8px 24px;
 }
 
 
@@ -385,21 +424,38 @@ a, a:visited, a:hover, a:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: rgba(10, 10, 10, 0.2) 0px 8px 24px;
 }
 
 .text-maintenance {
-    font-size: x-small;
+    font-size: medium;
     margin: 0.5rem 0.5rem 0.5rem 1rem;
     border-bottom: grey;
     border-style: solid;
 
 }
 
+
+.user {
+    display: flex;
+    align-items: center;
+
+    margin: 0.5rem 0.5rem 0.5rem 1rem;  
+}
+
+.user > img {
+    height: 2.5rem;
+}
+
+.user-text {
+    margin-left: 1.0rem;
+}
+
 .cards-icon {
+    align-self: flex-end;
+
     display: flex;
     justify-content: flex-end;
-    
-
 }
 
 .cards-icon > img {
@@ -436,3 +492,4 @@ a, a:visited, a:hover, a:focus {
     grid-column: 2 / 3;
 }
 
+/* text */
